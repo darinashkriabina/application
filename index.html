@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Додаток для відстеження фізичної активності</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Стартова сторінка -->
+    <div id="home" class="container">
+        <h1>Додаток для відстеження активності</h1>
+        <button onclick="showRegistration()">Реєстрація</button>
+        <button onclick="showLogin()">Вхід</button>
+    </div>
+
+    <!-- Форма реєстрації -->
+    <div id="registration" class="form-container">
+        <h2>Реєстрація</h2>
+        <form id="registrationForm">
+            <input type="text" id="regName" placeholder="Ім'я" required>
+            <input type="email" id="regEmail" placeholder="Електронна пошта" required>
+            <input type="password" id="regPassword" placeholder="Пароль" required>
+            <button type="submit">Зареєструватися</button>
+        </form>
+        <button onclick="showHome()">Назад</button>
+    </div>
+
+    <!-- Форма входу -->
+    <div id="login" class="form-container">
+        <h2>Вхід</h2>
+        <form id="loginForm">
+            <input type="email" id="loginEmail" placeholder="Електронна пошта" required>
+            <input type="password" id="loginPassword" placeholder="Пароль" required>
+            <button type="submit">Увійти</button>
+        </form>
+        <button onclick="showHome()">Назад</button>
+    </div>
+
+    <!-- Головне меню після входу -->
+    <div id="mainMenu" class="container">
+        <h1>Вітаємо у додатку!<span id="userName"></span></h1>
+        <button onclick="showTrainingHistory()">Історія тренувань</button>
+        <button onclick="showStatistics()">Статистика</button>
+        <button onclick="showGoals()">Цілі</button>
+        <button onclick="showSettings()">Налаштування</button>
+        <button onclick="showHome()">Вийти</button>
+    </div>
+
+    <!-- Історія тренувань -->
+    <div id="trainingHistory" class="container">
+        <h2>Історія тренувань</h2>
+        <div id="historyList">
+            <!-- Тут буде список тренувань -->
+        </div>
+        <button onclick="showMainMenu()">Назад</button>
+    </div>
+
+    <!-- Статистика -->
+    <div id="statistics" class="container">
+        <h2>Статистика</h2>
+        <div id="stats">
+            <!-- Тут буде статистика -->
+        </div>
+        <button onclick="showMainMenu()">Назад</button>
+    </div>
+
+    <!-- Цілі -->
+    <div id="goals" class="container">
+        <h2>Цілі</h2>
+        <div id="goalList">
+            <!-- Тут буде список цілей -->
+        </div>
+        <button onclick="showMainMenu()">Назад</button>
+    </div>
+
+    <!-- Налаштування -->
+    <div id="settings" class="container">
+        <h2>Налаштування</h2>
+        <form id="settingsForm">
+            <input type="text" id="userNameInput" placeholder="Ім'я користувача" required>
+            <input type="email" id="userEmailInput" placeholder="Електронна пошта" required>
+            <button type="submit">Зберегти</button>
+        </form>
+        <button onclick="showMainMenu()">Назад</button>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
